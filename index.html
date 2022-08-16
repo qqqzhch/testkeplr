@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+        function test2(){
+            window.keplr.enable("lambdatest_92001-1")
+        }
+        function test(){
+        console.log('- -')
+        
+        
+        let Prefix="lamb";        
+        window.keplr.experimentalSuggestChain({
+            chainId: "lambdatest_92001-1",
+            chainName: "Lambda test",
+            rpc: "http://18.143.13.243:26657",
+            rest: "http://18.143.13.243:1317",
+            bip44: {
+                coinType: 118,
+            },
+            bech32Config: {
+                bech32PrefixAccAddr: Prefix,
+                bech32PrefixAccPub: Prefix + "pub",
+                bech32PrefixValAddr: Prefix + "valoper",
+                bech32PrefixValPub: Prefix + "valoperpub",
+                bech32PrefixConsAddr: Prefix + "valcons",
+                bech32PrefixConsPub: Prefix + "valconspub",
+            },
+            currencies: [ 
+                { 
+                    coinDenom: "LAMB", 
+                    coinMinimalDenom: "ulamb", 
+                    coinDecimals: 18, 
+                    coinGeckoId: "lamb", 
+                }, 
+            ],
+            feeCurrencies: [
+                { 
+                    coinDenom: "LAMB", 
+                    coinMinimalDenom: "ulamb", 
+                    coinDecimals: 18, 
+                    coinGeckoId: "lamb", 
+                },
+            ],
+            stakeCurrency: { 
+                coinDenom: "LAMB", 
+                coinMinimalDenom: "ulamb", 
+                coinDecimals: 18, 
+                coinGeckoId: "lamb", 
+            },
+            gasPriceStep: {
+                low: 0.01,
+                average: 0.025,
+                high: 0.03,
+            },
+        });
+        }
+        </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but antd-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <button onClick="test2()">链接网络</button>
+    <button onClick="test()">添加网络</button>
+    <!-- built files will be auto injected -->
+    
+  </body>
+</html>
