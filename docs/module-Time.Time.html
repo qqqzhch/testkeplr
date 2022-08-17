@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: module:index</title>
+    <title>JSDoc: Class: Time</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: module:index</h1>
+    <h1 class="page-title">Class: Time</h1>
 
     
 
@@ -28,7 +28,8 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>module:index<span class="signature">(ethereumOrJsonRpc, account, chainID)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-Time.html">Time</a>.</span>Time<span class="signature">(timestamp)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +42,7 @@
     
 
     
-    <h4 class="name" id="module:index"><span class="type-signature"></span>new module:index<span class="signature">(ethereumOrJsonRpc, account, chainID)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Time"><span class="type-signature"></span>new Time<span class="signature">(timestamp)</span><span class="type-signature"></span></h4>
     
 
     
@@ -49,7 +50,7 @@
 
 
 <div class="description">
-    初始化sdk
+    初始化时间
 </div>
 
 
@@ -85,13 +86,13 @@
 
         <tr>
             
-                <td class="name"><code>ethereumOrJsonRpc</code></td>
+                <td class="name"><code>timestamp</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">number</span>
 
 
             
@@ -101,53 +102,7 @@
 
             
 
-            <td class="description last">window.ethereum  或者 jsonrpc 的url 用于walletconnect</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">当前账户的地址</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>chainID</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">当前的网络id</td>
+            <td class="description last">时间戳</td>
         </tr>
 
     
@@ -188,7 +143,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line19">line 19</a>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -238,13 +193,13 @@
 
         
             
-<h4 class="name" id="Alleria"><span class="type-signature"></span>Alleria<span class="type-signature"></span></h4>
+<h4 class="name" id="time"><span class="type-signature"></span>time<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Alleria 实例
+    dayjs 时间对象
 </div>
 
 
@@ -282,7 +237,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line30">line 30</a>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -292,6 +247,100 @@
 
     
 </dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="addDay"><span class="type-signature"></span>addDay<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    添加天
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line31">line 31</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,14 +349,26 @@
 
         
             
-<h4 class="name" id="AlleriaGas"><span class="type-signature"></span>AlleriaGas<span class="type-signature"></span></h4>
 
+    
+
+    
+    <h4 class="name" id="addHour"><span class="type-signature"></span>addHour<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
 
 
 
 <div class="description">
-    AlleriaGas 实例 Alleria合约相关操作方法获取gas
+    添加小时
 </div>
+
+
+
+
+
+
 
 
 
@@ -344,7 +405,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line38">line 38</a>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -354,6 +415,20 @@
 
     
 </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -362,14 +437,26 @@
 
         
             
-<h4 class="name" id="GasPrice"><span class="type-signature"></span>GasPrice<span class="type-signature"></span></h4>
 
+    
+
+    
+    <h4 class="name" id="addMinute"><span class="type-signature"></span>addMinute<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
 
 
 
 <div class="description">
-    GasPrice 实例
+    添加分
 </div>
+
+
+
+
+
+
 
 
 
@@ -406,7 +493,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line36">line 36</a>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line37">line 37</a>
     </li></ul></dd>
     
 
@@ -416,6 +503,20 @@
 
     
 </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,14 +525,26 @@
 
         
             
-<h4 class="name" id="MinterSetPrice"><span class="type-signature"></span>MinterSetPrice<span class="type-signature"></span></h4>
 
+    
+
+    
+    <h4 class="name" id="getTime"><span class="type-signature"></span>getTime<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
 
 
 
 <div class="description">
-    MinterSetPrice 实例
+    获取时间戳
 </div>
+
+
+
+
+
+
 
 
 
@@ -468,7 +581,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line32">line 32</a>
+        <a href="moment.js.html">moment.js</a>, <a href="moment.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -484,16 +597,6 @@
 
 
 
-        
-            
-<h4 class="name" id="MinterSetPriceGas"><span class="type-signature"></span>MinterSetPriceGas<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    MinterSetPriceGas 实例 MinterSetPrice合约相关操作方法获取gas
-</div>
 
 
 
@@ -501,45 +604,7 @@
 
 
 
-<dl class="details">
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line40">line 40</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
 
 
 
@@ -547,70 +612,6 @@
 
 
         
-            
-<h4 class="name" id="moment"><span class="type-signature"></span>moment<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    moment 实例
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line34">line 34</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
-
     
 
     

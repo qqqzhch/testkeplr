@@ -75,15 +75,15 @@ export default class MinterSetPrice{
     
     }
     /**
-     * addProject
+     * setProjectMintInfo 设置project mint信息
      *  @param {Object} ProjectMintInfo - The ProjectMintInfo who is responsible for the project.
-     * @param  {string} Project.projectId
-     * @param  {number} Project.pricePerTokenInWei
-     * @param  {number} Project.maxInvocations
-     * @param  {number} Project.startTime  区块链时间秒
-     * @param  {boolean} Project.disable  
-     * @param  {Array} Project.addrs  
-     * @param  {Array} Project.rates
+     * @param  {string} Project.projectId 项目Id
+     * @param  {number} Project.pricePerTokenInWei mint价格(固定)
+     * @param  {number} Project.maxInvocations 项目数量
+     * @param  {number} Project.startTime mint开始时间  区块链时间秒
+     * @param  {boolean} Project.disable  是否可mint
+     * @param  {Array} Project.addrs  收取版税地址
+     * @param  {Array} Project.rates 版税费率
     */
     async setProjectMintInfo({projectId,pricePerTokenInWei,maxInvocations,
         startTime,disable,addrs,rates}) {
@@ -101,7 +101,8 @@ export default class MinterSetPrice{
     
     }
     /**
-     * @param  {number} projectId
+     * 设置项目是否可mint
+     * @param  {number} projectId 项目id
     */
     async togglePurchaseToDisabled(projectId){
         const contract = this.getContract();
@@ -110,8 +111,9 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
-     * @param  {number} pricePerTokenInWei
+     * 设置项目mint价格
+     * @param  {number} projectId 项目id
+     * @param  {number} pricePerTokenInWei mint价格
     */
     async updatePricePerTokenInWei(projectId,pricePerTokenInWei){
         const contract = this.getContract();
@@ -120,8 +122,9 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
-     * @param  {number} maxInvocations
+     * 设置项目最大可mint数量
+     * @param  {number} projectId 项目id
+     * @param  {number} maxInvocations mint数量
     */
     async updateMaxInvocations(projectId,maxInvocations){
         const contract = this.getContract();
@@ -131,7 +134,8 @@ export default class MinterSetPrice{
         return info;
     }
     /**
-     * @param  {number} projectId
+     * 设置项目mint开始时间
+     * @param  {number} projectId 项目id
      * @param  {number} startTime 时间是秒
     */
     async updateStartTime(projectId,startTime){
@@ -143,9 +147,10 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
-     * @param  {Array} addrs
-     * @param  {Array} rates
+     * 设置项目版税和接收地址
+     * @param  {number} projectId 项目Id
+     * @param  {Array} addrs  版税接收地址
+     * @param  {Array} rates 版税费率
     */
     async updateProjectRoyaltyData(projectId,addrs,rates){
         const contract = this.getContract();
@@ -156,8 +161,9 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
-     * @param  {Array} addrs
+     * 设置项目白名单地址
+     * @param  {number} projectId 项目id
+     * @param  {Array} addrs 白名单地址列表  最多一次设置200个
     */
     async addProjectWhitelist(projectId,addrs){
         const contract = this.getContract();
@@ -168,8 +174,9 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
-     * @param  {Array} price
+     * 设置项目白名单mint价格
+     * @param  {number} projectId  项目id
+     * @param  {number} price 项目价格
     */
     async updateProjectWhitelistPrice(projectId,price){
         const contract = this.getContract();
@@ -178,7 +185,8 @@ export default class MinterSetPrice{
         return info;
     }
     /**
-     * @param  {number} projectId
+     *  购买NFT
+     * @param  {number} projectId 项目id
      * @param  {number} value   金额
     */
     async purchase(projectId,value){
@@ -189,7 +197,8 @@ export default class MinterSetPrice{
 
     }
     /**
-     * @param  {number} projectId
+     * 获取项目白名单地址
+     * @param  {number} projectId 项目id
     */
     async getWhitelists(projectId){
         const contract = this.getContractRead();
@@ -198,7 +207,8 @@ export default class MinterSetPrice{
         return info;
     }
     /**
-     * @param  {number} projectId
+     * 获取项目mint信息
+     * @param  {number} projectId 项目id
     */
     async getMintInfo(projectId){
         const contract = this.getContractRead();
@@ -222,13 +232,13 @@ export default class MinterSetPrice{
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Alleria.html">Alleria</a></li><li><a href="module-GasPrice.html">GasPrice</a></li><li><a href="module-index.html">index</a></li><li><a href="module-MinterSetPrice.html">MinterSetPrice</a></li><li><a href="module-moment.html">moment</a></li></ul><h3>Classes</h3><ul><li><a href="module-index.html">index</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Alleria.html">Alleria</a></li><li><a href="module-GasPrice.html">GasPrice</a></li><li><a href="module-index.html">index</a></li><li><a href="module-MinterSetPrice.html">MinterSetPrice</a></li><li><a href="module-moment.html">moment</a></li><li><a href="module-Time.html">Time</a></li></ul><h3>Classes</h3><ul><li><a href="module-index.html">index</a></li><li><a href="module-Time.Time.html">Time</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Tue Aug 16 2022 14:53:09 GMT+0800 (GMT+08:00)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Wed Aug 17 2022 15:47:42 GMT+0800 (GMT+08:00)
 </footer>
 
 <script> prettyPrint(); </script>
